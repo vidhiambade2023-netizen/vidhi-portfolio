@@ -1,12 +1,11 @@
-import Nav from '../components/Nav'
+import Header from '../components/Header'
+import Hero from '../components/Hero'
 
 export default function Home() {
   return (
-    <div>
-      <Nav />
-      <main style={{ textAlign: 'center', padding: '2rem' }}>
-        <h1>Home</h1>
-      </main>
+    <div style={{ paddingTop: '5rem' }}>
+      <Header />
+      <Hero />
     </div>
   )
 }
