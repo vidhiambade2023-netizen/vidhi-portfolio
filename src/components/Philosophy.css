@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+.philosophy-section {
+  padding: 7rem 1.5rem;
+  background: transparent;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.philosophy-container {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Quote Section */
+.philosophy-quote {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  margin-bottom: 3.5rem;
+  width: 100%;
+}
+
+.philosophy-line-wrapper {
+  display: flex;
+  width: auto;
+}
+
+.philosophy-line {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(2.2rem, 5.2vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+}
+
+/* Line Hover Effect: Solid White background highlight with crisp Black text */
+.philosophy-line:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Horizontal Divider */
+.philosophy-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-bottom: 2.5rem;
+}
+
+/* 4 Stroke Boxes */
+.philosophy-tags {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.philosophy-tag-box {
+  background-color: rgba(18, 18, 20, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.15rem 1rem;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #a1a1aa;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Animation for Stroke Boxes */
+.philosophy-tag-box:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+  background-color: rgba(24, 24, 28, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.philosophy-tag-box:active {
+  transform: scale(0.97) translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .philosophy-section {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .philosophy-tags {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .philosophy-line {
+    padding: 0.1em 0.25em;
+  }
+
+  .philosophy-tag-box {
+    padding: 0.95rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}

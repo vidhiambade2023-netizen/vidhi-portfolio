@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #09090b;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}

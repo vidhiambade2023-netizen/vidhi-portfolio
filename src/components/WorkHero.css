@@ -1,0 +1,90 @@
+.work-hero-section {
+  position: relative;
+  min-height: 55vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 2rem 3rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #09090b;
+  color: #ffffff;
+}
+
+.work-hero-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+/* "My recent" in smaller serif italics */
+.work-hero-tagline {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  color: #a1a1aa;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* "WORKS" with Liquid Maroon Glass Distortion Animation */
+.work-hero-giant-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-size: clamp(5.5rem, 18vw, 14rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  margin: 0;
+  text-align: center;
+  user-select: none;
+  width: 100%;
+  color: #ffffff;
+
+  /* Glass Distortion Sheen Gradient: White -> Distorted Specular Light -> Maroon #79001B */
+  background: linear-gradient(
+    115deg,
+    #79001B 0%,
+    #79001B 38%,
+    #a30829 44%,
+    #ff85a1 48%,
+    #ffffff 51%,
+    #ffb3c1 54%,
+    #79001B 58%,
+    #ffffff 68%,
+    #ffffff 100%
+  );
+  background-size: 320% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: maroonGlassDistortionWork 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+  filter: drop-shadow(0 14px 40px rgba(0, 0, 0, 0.8));
+}
+
+@keyframes maroonGlassDistortionWork {
+  0%, 15% {
+    background-position: 100% 0;
+  }
+  85%, 100% {
+    background-position: 0% 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .work-hero-section {
+    padding: 6.5rem 1.25rem 2rem;
+    min-height: 45vh;
+  }
+}

@@ -1,0 +1,52 @@
+.home-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-color: #09090b;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Fullscreen parallax background image covering the entire homepage */
+.home-bg-animated {
+  position: fixed;
+  top: -10%;
+  left: -5%;
+  width: 110%;
+  height: 125%;
+  background-image: url('/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  will-change: transform;
+  transition: transform 0.08s cubic-bezier(0.1, 0.9, 0.2, 1);
+  animation: wavePulse 14s ease-in-out infinite alternate;
+}
+
+/* Subtle breathing & light wave drift animation when idle */
+@keyframes wavePulse {
+  0% {
+    filter: brightness(0.95) contrast(1);
+  }
+  50% {
+    filter: brightness(1.1) contrast(1.08);
+  }
+  100% {
+    filter: brightness(0.9) contrast(1);
+  }
+}
+
+/* Gradient overlay for optimal readability */
+.home-bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(9, 9, 11, 0.3) 0%, rgba(9, 9, 11, 0.75) 80%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Container for page content */
+.home-content {
+  position: relative;
+  z-index: 2;
+}

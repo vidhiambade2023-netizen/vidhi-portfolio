@@ -1,0 +1,197 @@
+.about-hero-section {
+  position: relative;
+  min-height: 88vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 2rem 5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Background image & gradient overlay */
+.about-hero-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.about-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.58) contrast(1.15);
+  transform: scale(1.02);
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 11, 0.75) 0%,
+    rgba(9, 9, 11, 0.4) 50%,
+    rgba(9, 9, 11, 0.88) 100%
+  );
+  pointer-events: none;
+}
+
+/* Header Block wrapping 4 corner elements & giant "About" */
+.about-hero-header-block {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 980px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0;
+}
+
+/* Top & Bottom Rows */
+.about-hero-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Equal Top Spacing */
+.about-hero-top-row {
+  margin-bottom: 1.5rem;
+}
+
+/* Equal Bottom Spacing */
+.about-hero-bottom-row {
+  margin-top: 1.5rem;
+}
+
+/* Top Row Plain Text */
+.about-hero-text-left,
+.about-hero-text-right {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-size: clamp(0.85rem, 1.3vw, 1.1rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Massive Display Title "About" with Liquid Maroon Glass Distortion Animation */
+.about-hero-giant-title {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-size: clamp(7.5rem, 27vw, 22rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  margin: 0;
+  text-align: center;
+  user-select: none;
+  width: 100%;
+  position: relative;
+  color: #ffffff;
+
+  /* Glass Distortion Sheen Gradient: White -> Distorted Specular Light -> Maroon #79001B */
+  background: linear-gradient(
+    115deg,
+    #79001B 0%,
+    #79001B 38%,
+    #a30829 44%,
+    #ff85a1 48%,
+    #ffffff 51%,
+    #ffb3c1 54%,
+    #79001B 58%,
+    #ffffff 68%,
+    #ffffff 100%
+  );
+  background-size: 320% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: maroonGlassDistortion 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+  filter: drop-shadow(0 14px 40px rgba(0, 0, 0, 0.8));
+}
+
+@keyframes maroonGlassDistortion {
+  0%, 15% {
+    background-position: 100% 0;
+  }
+  85%, 100% {
+    background-position: 0% 0;
+  }
+}
+
+/* Bottom-Left Email Link */
+.about-hero-email-link {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-size: clamp(0.9rem, 1.3vw, 1.15rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.about-hero-email-link:hover {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+/* Bottom-Right Download Button */
+.about-hero-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.about-hero-download-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.about-hero-download-btn:active {
+  transform: scale(0.96);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .about-hero-section {
+    padding: 6rem 1.25rem 3.5rem;
+  }
+
+  .about-hero-row {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+}

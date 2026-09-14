@@ -5,84 +5,16 @@
   right: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(15, 15, 17, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 0.75rem 2rem;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  background: transparent;
   box-sizing: border-box;
 }
 
-.header-content {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-/* Left side Brand Link */
-.header-brand {
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
-  letter-spacing: -0.02em;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.header-brand:hover {
-  opacity: 0.85;
-  transform: translateY(-1px);
-}
-
-/* Right side container for Nav and Button */
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.header-right .nav-container {
-  padding: 0;
-  position: static;
-  width: auto;
-}
-
-/* Book a call Button Link */
-.book-call-link {
-  text-decoration: none;
-  display: inline-block;
-}
-
-/* Button States: Default, Hover, Pressed */
-.book-call-btn {
-  /* Default State — filled with accent color */
-  background-color: #2563eb;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding: 0.55rem 1.25rem;
-  border-radius: 9999px;
-  border: none;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-              background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-
-/* Hover State — slight lift and darker background */
-.book-call-btn:hover {
-  background-color: #1d4ed8;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
-}
-
-/* Pressed State — subtle scale-down */
-.book-call-btn:active {
-  transform: scale(0.96) translateY(0);
-  background-color: #1e40af;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+/* Enable pointer events on the inner floating Nav */
+.header-wrapper > * {
+  pointer-events: auto;
 }

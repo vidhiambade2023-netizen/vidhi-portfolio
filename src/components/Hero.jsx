@@ -5,47 +5,42 @@ import './Hero.css'
 export default function Hero() {
   return (
     <section className="hero-section">
-      <div className="hero-grid">
-        {/* Left Column */}
-        <div className="hero-left">
-          <div className="hero-tag">
-            <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#22c55e', display: 'inline-block' }}></span>
-            UI/UX Designer & Researcher
-          </div>
+      <div className="hero-container">
+        {/* Headline with slightly smaller font size for line 3 */}
+        <h1 className="hero-headline">
+          I’m <span className="serif-italic">Vidhi</span>
+          <span className="hero-frame-rect">
+            <img src="/vidhi.jpg" alt="Vidhi portrait" className="hero-frame-img" />
+          </span>,
+          <br />
+          a <span className="maroon-text">UX</span>
+          <span className="hero-frame-rect">
+            <img src="/sphere.gif" alt="Particle Sphere GIF" className="hero-frame-img" />
+          </span>
+          <span className="serif-italic maroon-text">Designer</span>,
+          <br />
+          <span className="hero-headline-line3">
+            who designs for <span className="serif-italic">people</span>
+          </span>
+        </h1>
 
-          <h1 className="hero-headline">
-            I design digital experiences that make complex things feel simple.
-          </h1>
+        {/* Subhead */}
+        <p className="hero-subhead">
+          UI/UX design student focused on UX research, interaction design, and thoughtful digital experiences.
+        </p>
 
-          <p className="hero-headline-sub">
-            Turning research, systems, and ideas into intuitive interfaces that balance clarity, usability, and visual craft.
-          </p>
-
-          <p className="hero-subhead">
-            UI/UX design student focused on UX research, interaction design, and thoughtful digital experiences.
-          </p>
-
-          <Link to="/work" className="hero-cta">
-            <Button className="hero-btn">
-              See selected work
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        {/* Neumorphic Pill Button */}
+        <Link to="/work" className="hero-cta">
+          <div className="hero-btn-wrapper">
+            <Button className="hero-view-work-btn">
+              View my Work
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </Button>
-          </Link>
-        </div>
-
-        {/* Right Column */}
-        <div className="hero-right">
-          <div className="hero-image-wrapper">
-            <img
-              src="/hero.jpg"
-              alt="Vidhi - UI/UX Designer"
-              className="hero-image"
-            />
           </div>
-        </div>
+        </Link>
       </div>
     </section>
   )

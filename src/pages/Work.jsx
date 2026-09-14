@@ -1,13 +1,17 @@
 import Header from '../components/Header'
+import WorkHero from '../components/WorkHero'
+import Projects from '../components/Projects'
+import Footer from '../components/Footer'
 
 export default function Work() {
   return (
-    <div style={{ minHeight: '120vh', paddingTop: '6rem' }}>
+    <div className="work-page-wrapper">
       <Header />
-      <main style={{ textAlign: 'center', padding: '2rem' }}>
-        <h1>Work</h1>
-        <p style={{ color: '#a1a1aa', marginTop: '1rem' }}>Featured projects and case studies.</p>
+      <main>
+        <WorkHero />
+        <Projects />
       </main>
+      <Footer />
     </div>
   )
 }
